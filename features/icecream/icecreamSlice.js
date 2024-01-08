@@ -16,6 +16,7 @@ const icecreamSlice = createSlice({
             state.noOfIcecreams += action.payload
         }
     },
+    // responding to other action types besides its own
     extraReducers: (builder) => {
         builder.addCase(cakeActions.ordered, (state, action) => {
             state.noOfIcecreams--
